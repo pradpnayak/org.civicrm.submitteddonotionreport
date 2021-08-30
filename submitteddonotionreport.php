@@ -268,10 +268,8 @@ function submitteddonotionreport_civicrm_alterReportVar(
     }
 
     $from = $object->getVar('_from') . $fromClause;
-    $aclFrom = $object->getVar('_aclFrom') . $fromClause;
     $object->_originVar = $from;
     $object->setVar('_from', $from);
-    $object->setVar('_aclFrom', $aclFrom);
   }
   elseif ($varType == 'rows') {
     if (!empty($object->_originVar)) {
